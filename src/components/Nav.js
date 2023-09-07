@@ -5,6 +5,7 @@ const Nav = ()=>{
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="order.html">Order Here</a></li>
+                <li><a href="bookTable.html">Book Table</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
     </nav>);
