@@ -2,6 +2,9 @@ import promotion from "../Assets/promotion.jpg";
 import menu from "../Assets/menu.jpg";
 import bookTable from "../Assets/bookTable.jpg";
 import openingHours from "../Assets/openingHours.jpg";
+import { Link } from 'react-router-dom';
+import React from 'react';
+
 
 const Main = ()=>{
     return (
@@ -10,7 +13,7 @@ const Main = ()=>{
             <article>
                 <div id="imageContainer">
                     <img src={promotion} alt="Promotion"/>
-                    <div class="overlay"></div>
+                    <div className="overlay"></div>
                     <h1>30% Off This Weekend</h1>
                     <p>
                           Lorem ipsum dolor sit amet Consectetur adipiscing elit
@@ -22,8 +25,8 @@ const Main = ()=>{
                   </div>
             </article>
         </section>
-        <section class="sections">
-          <article class="article1">
+        <section className="sections">
+          <article className="article1">
               <h2>Our new menu</h2>
                   <img src={menu} alt="New menu"/>
                   <p>
@@ -33,9 +36,9 @@ const Main = ()=>{
                       Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
                       Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
                 </p>
-                <a href="newMenu.html">See Our New Menu</a>
+                <Link to="/menu">See Our New Menu</Link>
           </article>
-          <article class="article2">
+          <article className="article2">
               <h2>Book a table</h2>
                   <img src={bookTable} alt="Book a table"/>
                   <p>
@@ -45,25 +48,25 @@ const Main = ()=>{
                       Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
                       Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
                 </p>
-                <a href="bookTable.html">Book your table now</a>
+                <Link to="/book-table">Book your table now</Link>
           </article>
           <article>
               <h2>Opening Hours</h2>
                   <img src={openingHours} alt="Opening hours"/>
-                  <div>
+                  <React.Fragment>
                       Lorem ipsum dolor sit amet Consectetur adipiscing elit
                       Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </div>
-                  <div class="times">
-                      <div>
+                  </React.Fragment>
+                  <div className="times">
+                      <React.Fragment>
                     Mon - Fri: 2pm - 10pm
-                  </div>
-                  <div>
+                  </React.Fragment>
+                  <React.Fragment>
                       Sat: 2pm - 11pm
-                  </div>
-                  <div>
+                  </React.Fragment>
+                  <React.Fragment>
                       Sun: 2pm - 9pm
-                  </div>
+                  </React.Fragment>
               </div>
           </article>
           </section>

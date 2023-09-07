@@ -1,23 +1,24 @@
 import './App.css';
-import Header from "./components/Header";
-import Nav from './components/Nav';
-import Main from './components/Main';
-import Footer from './components/Footer';
+import React from 'react';
+import Home from './components/Home';
+import About from './components/About';
+import Menu from './components/Menu';
+import OrderHere from './components/OrderHere';
+import BookTable from './components/BookTable';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <>
-      <Header/>
-        <Nav/>
-        <Main>
-          <section>
-          </section>
-          <section>
-          </section>
-        </Main>
-        <Footer>
-        </Footer>
-    </>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Home/>} />
+        <Route path="/home" element={<Home/>} />
+        <Route path="/about" element={<About/>}/>
+        <Route path="/menu" element={<Menu/>}/>
+        <Route path="/order-here" element={<OrderHere/>}/>
+        <Route path="/book-table" element={<BookTable/>}/>
+      </Routes>
+    </Router>
   );
 }
 
