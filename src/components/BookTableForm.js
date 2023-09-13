@@ -30,20 +30,20 @@ function BookTableForm({formData, setFormData}) {
         <>
         <form id="form" onSubmit={handleSubmit}>
             <label htmlFor="res-name">Name</label>
-            <input type="text" id="res-name" name="name" value={formData.name} onChange={handleInputChange}/>
+            <input type="text" id="res-name" name="name" value={formData.name} onChange={handleInputChange} required/>
             <label htmlFor="res-date">Choose date</label>
-            <input type="date" id="res-date" name="date" value={formData.date} onChange={handleInputChange}/>
+            <input type="date" id="res-date" name="date" value={formData.date} onChange={handleInputChange} required/>
             <label htmlFor="res-time">Choose time</label>
-            <select id="res-time" name="time" value={formData.time} onChange={handleInputChange}>
+            <select id="res-time" name="time" value={formData.time} onChange={handleInputChange} required>
                 <option value="" default>Select an option</option>
                 {Object.values(formData.times).filter(t => t.available).map((option, index)=>(
                     <option key={index} value={option.time}>{option.time}</option>
                 ))}
             </select>
             <label htmlFor="guests">Number of guests</label>
-            <input type="number" placeholder="1" min="1" max="10" id="guests" name="guests" value={formData.guests} onChange={handleInputChange}/>
+            <input type="number" placeholder="1" min="1" max="10" id="guests" name="guests" value={formData.guests} required onChange={handleInputChange}/>
             <label htmlFor="occasion">Occasion</label>
-            <select id="occasion" name="occasion" value={formData.occasion} onChange={handleInputChange}>
+            <select id="occasion" name="occasion" value={formData.occasion} onChange={handleInputChange} required>
                  <option value="" default>Select an option</option>
                  <option>Birthday</option>
                  <option>Anniversary</option>
