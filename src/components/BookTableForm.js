@@ -36,37 +36,6 @@ function BookTableForm({ formData, setFormData }) {
     setSubmitting(false);
   };
 
-  // const updatedTimes = formData.times.map((timeObj) => {
-  //   for (let i of values.times) {
-  //     if (timeObj === i) {
-  //       //   // Update the available property for the selected time
-  //       return { ...timeObj, available: false }; // You can set it to false or change it according to your logic
-  //     }
-  //     return timeObj; // For other times, just return them as they are
-  //   }
-  //   console.log("hi", updatedTimes);
-  // });
-
-  //   const handleInputChange = (e)=>{
-  //     const { name, value } = e.target;
-  //     if(name === "time"){
-  //         // updateTime(e.target.value);
-  //         const updatedTimes = formData.times.map((timeObj) => {
-  //             if (timeObj.time === e.target.value) {
-  //               // Update the available property for the selected time
-  //               return { ...timeObj, available: false }; // You can set it to false or change it according to your logic
-  //             }
-  //             return timeObj; // For other times, just return them as they are
-  //           });
-  //           setFormData({
-  //             ...formData,
-  //             times: updatedTimes,
-  //           });
-  //     }
-  //     else{
-  //         setFormData({ ...formData, [name]: value });
-  //     }
-  //}
   return (
     <Formik
       initialValues={formData}
@@ -80,7 +49,6 @@ function BookTableForm({ formData, setFormData }) {
             <Field type="text" id="name" name="name" />
             <ErrorMessage name="name" component="div" />
           </div>
-
           <div>
             <label htmlFor="date">Choose date</label>
             <Field type="date" id="date" name="date" />
